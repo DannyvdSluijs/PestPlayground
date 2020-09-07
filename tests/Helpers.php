@@ -2,6 +2,8 @@
 
 namespace Tests;
 
+use Carbon\Carbon;
+
 /**
  * A basic assert example.
  */

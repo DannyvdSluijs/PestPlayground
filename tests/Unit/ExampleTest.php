@@ -2,17 +2,29 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+//beforeEach(function() {
+//    /* This will run before each test in this file */
+//});
 
-class ExampleTest extends TestCase
-{
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testBasicTest()
-    {
-        $this->assertTrue(true);
-    }
-}
+//it('example', function() {
+//        $this->assertTrue(true);
+//    }
+//);
+
+it('example')
+    ->assertTrue(true);
+
+//test('example')
+//    ->expect($this->value)->toBe(true);
+
+it('Null value throws exception', function() {
+    throw new \Exception('Error');
+})->throws(\Throwable::class);
+
+
+it('will do something', function(string $email) {
+    $this->assertStringContainsString('@', $email);
+})->with([
+    'danny@infi.nl',
+    'danny.van.der.sluijs@infi.nl'
+]);
